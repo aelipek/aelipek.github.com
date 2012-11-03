@@ -1,0 +1,47 @@
+<p>Örnek programımız aşağıdaki şekilde olsun.</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+int main(){
+	printf(&quot;Ferhat AKBULUT\n&quot;);
+	return 0;
+}</code></pre>
+
+<p>Programımızı <strong>deneme.c</strong> isminde masaüstüne kaydediyoruz. Kodumuzu terminalden (konsoldan) derleyip çalıştırmka için 2 yöntem kullanılmaktadır.</p>
+
+<p><strong>Yöntem - 1</strong></p>
+
+<p>Terminali açıp</p>
+
+<pre><code>cd Masaüstü</code></pre>
+
+<p>yazarak masaüsütüne geçiyoruz. Daha sonra <strong>deneme.c</strong> isimindeki programımızı derleyip çalıştırmak için</p>
+
+<pre><code>cc deneme.c
+/.a.out</code></pre>
+
+<p>komutlarını terminalden giriyoruz ve ekran çıktımızı terminal ekranından alıyoruz. Masaüstünde oluşan <strong>a.out</strong> dosyası oluştuğunu görüceksiniz. a.out sistem tarafından oluşturulur.</p>
+
+<pre><code>Ferhat AKBULUT</code></pre>
+
+<p><strong>Yöntem - 2</strong></p>
+
+<p>Programımızı <strong>gcc</strong> ile derlemek. Bunun için öncelikle sistemimize <strong>gcc</strong> kurmalıyız. Terminmalden (konsoldan)</p>
+
+<pre><code>sudo apt-get install gcc</code></pre>
+
+<p>yazarak sistemimize gcc yi kuruyoruz. gcc yani <strong>GNU Compiler Collection</strong> günümüzde bir çok programlama dilini destekleyen bir derleyicidir. GNU işletim sisteminin resmi derleyicisi olmanın yanı sıra, diğer bir çok modern Unix benzeri işletim sistemleri tarafından standart derleyici olarak benimsenmiştir. gcc hakkında kısa bir bilgi verdikten sonra şimdi programımızı derleyip ekran çıktısı alalım.</p>
+
+<pre><code>cd Masaüstü
+gcc deneme.c -o deneme
+./deneme</code></pre>
+
+<p>komutları ile ekran çıktısı alabaliriz. Ekran çıktımız aşağıdaki gibi olmaktadır.</p>
+
+<pre><code>Ferhat AKBULUT</code></pre>
+
+<p><strong>deneme</strong> isminde ayrı bir dosyaoluşturulduğunu görüceksiniz. Verilen ismi değiştirebiliriz. Örneğin</p>
+
+<pre><code>gcc deneme.c -o fehat
+./ferhat</code></pre>
+
+<p>bu defa <strong>ferhat</strong> isimli bir dosya oluşacaktır. Bizde bu dosyayı çalıştırıyoruz.</p>

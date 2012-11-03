@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Ferhat Akbulut</title>
+ <link href="http://ferhatakblt.github.com/atom.xml" rel="self"/>
+ <link href="http://ferhatakblt.github.com/"/>
+ <updated>2012-06-30T18:37:52+03:00</updated>
+ <id>http://ferhatakblt.github.com/</id>
+ <author>
+   <name>Ferhat Akbulut</name>
+   <email>fbulut@bil.omu.edu.tr</email>
+ </author>
+
+ 
+ <entry>
+   <title>Ruby on Rails Kurulumu</title>
+   <link href="http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu"/>
+   <updated>2012-06-17T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu</id>
+   <content type="html">&lt;p&gt;Ruby on Rails kısaca RoR diyebiliriz. Kurulumu biraz zaman alabilir. Sadece sabır :) RoR web programlama için kullanılmaktadır..&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RoR Kurlumu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;İlk olarak Ruby 1.9.2 yi kurmalıyız. Ama önce bir kaç kütüphaneye ihtiyacımız var. Bunun için konsola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get -y install libc6-dev libssl-dev libmysql++-dev libsqlite3-dev make build-essential libssl-dev libreadline6-dev zlib1g-dev&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yazıyoruz. İşlemi sonlandıktan sonra sistemimize Ruby kurabiliriz. Konsolu açıp&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd /tmp
+$ mkdir src
+$ cd src
+$ wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
+$ tar xjvf ruby-1.9.2-p0.tar.gz&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;tar xjvf ruby-1.9.2-p0.tar.gz&lt;/strong&gt; komutu çalışmaz ise &lt;strong&gt;/tmp/src&lt;/strong&gt; dosyasını açıp indirdiğimiz &lt;strong&gt;ruby-1.9.2-p0.tar.gz&lt;/strong&gt; tar dosyasını el ilede bulunduğumuz klasöre çıkarabiliriz. Bu adımı başarıyla geçtikten sonra devam edlim&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ruby-1.9.2-p0/
+$ ./configure --prefix=/usr/local
+$ sudo make &amp;amp;&amp;amp; sudo make install &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bu komutların sonunda Ruby&amp;#8217; yi kurmuş oldu. Ruby&amp;#8217; nin sürümünü kontrol etmek için&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ruby -v&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yazarak şu çıktıyı alıyorsak sorun yok yola devam edebilriz.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;çıktı =&amp;gt; ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-linux]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ruby 1.9.2 sistemimize kurludu. Hız kesmeden devam edelim. Sırada SQLite ve MySQL kurlumu var.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SQLite3 ve MySQL 5.1 kurulumu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install mysql-server-5.1 sqlite3&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;komutuyla sistemimize kurulumu gerçekleştiriyoruz. Mysql Server kurlum sırasında bizden şifre istiycek bu şifreyi unutmalım. Hız kesmeden devam edelim.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rails ve gerekli gemlerin kurulumu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Şimdide sistemimize rails kuralım. Kurulumun tamamlanması biraz zaman alabilir. Sadece sabır :) &amp;#8230;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo gem update --system
+$ sudo gem install tzinfo builder memcache-client rack rack-test erubis mail mysql text-format bundler thor i18n sqlite3-ruby
+$ sudo gem install rack-mount –version=0.4.0
+$ sudo gem install rails&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kurulum sırasında herhangi bir hata almadıysanız sisteminize &lt;strong&gt;Ruby 1.9.2 - SQLite3 ve MySQL 5.1 - Rails&lt;/strong&gt; kurlumunu başarılı bir şekilde gerçekleştirdiniz demektir. Sisteme kurululan gemleri görmek için konsola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem list&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yazarak görebilrisiniz.&lt;br /&gt; &lt;strong&gt;Not&lt;/strong&gt; Eğer siteminizde mysql2 yi kullanmak isterseniz konsola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ sudo gem install mysql2&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yazmanız yeterli olacaktır.&lt;/p&gt;
+
+&lt;p&gt;RoR yani Ruby on Rails kurulumunu gerçekleştirdiniz. Kolay gelsin&amp;#8230;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>main Fonksiyonuna Argüman Aktarımı</title>
+   <link href="http://ferhatakblt.github.com/105/main-Fonksiyonuna-Arg%C3%BCman-Aktar%C4%B1m%C4%B1"/>
+   <updated>2012-05-10T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/105/main-Fonksiyonuna-Argüman-Aktarımı</id>
+   <content type="html">&lt;p&gt;main() fonksiyonunun argüman almadığını belirtmek için &lt;strong&gt;void&lt;/strong&gt; ( main(void) ) yapısını kullanıyorduk. Şimdi ise main() fonsiyonuna nasıl argüman aktarılacağını göstereceğiz.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+int main(int argc,int *argv[]){
+int i;
+for(i=0;i&amp;lt;argc;i++){
+	puts(argv[i]);
+}
+
+return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;örnek kodumuzu deneme.c adıyla masaüstüne kaydediyoruz. Sonra komut satırına&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~$ cd Masaüstü  		//masaüsütüne geçiyoruz
+~$ gcc deneme.c -o deneme       // gcc programı &amp;quot;deneme&amp;quot; adında çalıştırılabilir bir dosya oluşturacaktır.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Şimdi kodumuza argüman göndererek çalıştırmayı deneyelim.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~$ ./deneme ferhat Akbulut&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Çıktımız ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./deneme
+ferhat
+akbulut&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;şeklinde olacaktır. main fonksiyonunun parametreleri &lt;strong&gt;int&lt;/strong&gt; ve &lt;strong&gt;char&lt;/strong&gt;** türlerinden oluşabiliyor. &lt;strong&gt;argc&lt;/strong&gt; parametresi program ismi dahil komut satırı argümanlarının sayısını belirtir. Yani &lt;strong&gt;&lt;em&gt;./deneme, ferhat, Akbulut&lt;/em&gt;&lt;/strong&gt; ifadeleri komut satırı argümanlarımızdır. &lt;strong&gt;argv&lt;/strong&gt; ifademiz ise komut satırı argümanlarını oluşturan yazıların adreslerinin yerleştiği dizinin adresini belirtmektedir. Yani argv bir pointer dır. Başka bir örnek yapalım ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+void ters_cevir(char katar[]);
+int main(int argc,int *argv[]){
+	int i;
+	for(i=0;i&amp;lt;argc;i++){
+	
+		ters_cevir(argv[i]);
+		printf(&amp;quot;\n&amp;quot;);
+	}
+	printf(&amp;quot;\n&amp;quot;);
+
+	return 0;
+
+}
+void ters_cevir(char katar[]){
+	int i,uz;
+	uz=strlen(katar)-1;
+	for(;uz&amp;gt;=0;uz--){
+		printf(&amp;quot;%c&amp;quot;,katar[uz]);
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Program çalıştığında kendisine verilen argümanları tersten yazacaktır. Programı deneme_2.c adıyla kaydediyoruz.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~$ gcc deneme_2.c -o deneme_2	
+~$ ./deneme_2 ferhat Akbulut	&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ekran çıktımız;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2_emneed
+tahref
+tulubkA&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;şeklinde olacaktır.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Temel Linux Konsol Komutları</title>
+   <link href="http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutlar%C4%B1"/>
+   <updated>2012-01-05T00:00:00+02:00</updated>
+   <id>http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutları</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Yardım Alma&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Çoğu komut yanına &lt;strong&gt;&amp;#8211;help&lt;/strong&gt; yazıldığında küçük bir bilgi verir. Buna ek olarak linux’ta binlerce dokümanın bulunduğu manual sayfaları vardır. Yapmanız gereken tek şey &lt;strong&gt;man&lt;/strong&gt; komutundan sonra bilgi almak istediğiniz komutun adını yazmak.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;komut –help: Komut hakkında kısa bilgi  
+man komut: Komut hakkında detaylı doküman&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Dosyaları Listeleme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Linux’ta bir dizindeki dosyaları listelemek için kullanılan komut &lt;strong&gt;ls&lt;/strong&gt; dir. Ekrana sığmayan uzun listeleri göstermek için &lt;strong&gt;less&lt;/strong&gt; komutuyla beraber kullanılabilir.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ls: Bulunduğun dizinin içeriğini göster
+ls -a: Bulunduğu dizini içeriğini ve dizindeki gizli dosyaları da göster 
+ls -l: Uzun listele (sahip, izinler, boyut ve tarih dahil) 
+ls | less: Uzun listeleri kısaltmak için&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Dizin değiştirme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Başka bir dizine geçmek için &lt;strong&gt;cd&lt;/strong&gt; komutu kullanılır.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd yol: yol dizinine geçer 
+cd ~: Sizin home dizininize geçer 
+cd -: Bir önceki dizine döner 
+cd..: Bir üst dizine geçer&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Dosya ve dizin yönetimi&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Bir dizini veya dosyayı kopyalamak için &lt;strong&gt;cp&lt;/strong&gt;, taşımak için &lt;strong&gt;mv&lt;/strong&gt;, yeni klasör oluşturmak için &lt;strong&gt;mkdir&lt;/strong&gt;, dosyayı silmek için &lt;strong&gt;rm&lt;/strong&gt;, dizini ve içindeki dosyaları silmek için &lt;strong&gt;rm -R&lt;/strong&gt;, boş bir dizini silmek için ise &lt;strong&gt;rmdir&lt;/strong&gt; kullanılır.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp kaynak hedef: Kaynaktan hedefe kopyalar 
+cp -R kaynak hedef: Önyineli(recursive) kopyalar 
+mkdir dizin: Yeni dizin yaratır 
+mv kaynak hedef: Dosyaları taşımak veya adlarını değiştirmek için 
+rm dosya: Dosyayı kaldırır 
+rm -R dizin: Önyineli kaldırır 
+rmdir dizin: Boş dizini kaldırır 
+touch dosya: Dosya varsa tarihini değiştirir, yoksa yaratır 
+pwd: Çalışılan dizinin ismini verir&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Masaüstü Ayarlarını Sıfırlama</title>
+   <link href="http://ferhatakblt.github.com/112/Masa%C3%BCst%C3%BC-Ayarlar%C4%B1n%C4%B1-S%C4%B1f%C4%B1rlama"/>
+   <updated>2011-12-01T00:00:00+02:00</updated>
+   <id>http://ferhatakblt.github.com/112/Masaüstü-Ayarlarını-Sıfırlama</id>
+   <content type="html">&lt;p&gt;Gnome masaüstünde özellikle görünüm alanında bir türlü çözemediğiniz bir sorun olduğunda en garantili çözümlerden birisidir. &lt;br /&gt; Mevcut masaüstü ayarların kaybolması dışında başka bir yan etkisi de yoktur. &lt;br /&gt; &lt;br /&gt; 1- Yerler&amp;#8211;&amp;gt;Başlangıç Klasörü ne giriniz. &lt;br /&gt; &lt;br /&gt; &lt;img src='http://img259.imageshack.us/img259/964/ekrangrnts.jpg' /&gt; &lt;br /&gt; &lt;br /&gt; 2- Ev dizinine girip &lt;strong&gt;&amp;#8216;ctrl+h&amp;#8217;&lt;/strong&gt; yaptıktan sonra &lt;strong&gt;.gnome2&lt;/strong&gt; ve &lt;strong&gt;.gconf&lt;/strong&gt; klasörlerini silmeniz yeterlidir. &lt;br /&gt; &lt;br /&gt; &lt;img src='http://img137.imageshack.us/img137/4519/ekrangrntsa1o.png' /&gt; &lt;br /&gt; &lt;br /&gt; 3- İşlemi tamamlamak için bilgisayarı yeniden başlatın.Kolay gelsin.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Compiz Kurulumu</title>
+   <link href="http://ferhatakblt.github.com/111/Compiz-Kurulumu"/>
+   <updated>2011-11-03T00:00:00+02:00</updated>
+   <id>http://ferhatakblt.github.com/111/Compiz-Kurulumu</id>
+   <content type="html">&lt;p&gt;Linux işletim sistemlerinde Gnome ve KDE gibi masaüstleri üzerinde çeşitli efektleri yapmayı ve daha kullanışlı çalışmayı sunar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;İlk Ayarlar :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Öncelikle ekran kartının sürücüleri yüklenmiş olmalıdır.&lt;/p&gt;
+
+&lt;p&gt;Compiz’i son sürümünü kullanmak için sources.list dosyasına compiz deposu eklemek için konsola şu komut girilir:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gksu gedit /etc/apt/sources.list&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;açılan dosyanın sonuna &lt;strong&gt;deb http://ppa.launchpad.net/compiz/ubuntu karmic main&lt;/strong&gt; satırı eklenir.Değişiklikler kaydedilip dosya kapatılır.Aşağıdaki kod ile apt-get güncellenir:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Kurulum :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Compiz ayarları yöneticisinin kurlumu için :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sudo apt-get install compizconfig-settings-manager&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ve ekstra özellikler için &lt;strong&gt;Sistem-&amp;gt;Yönetim-&amp;gt;Synaptik Paket Yöneticisi&lt;/strong&gt; yolu izlenerek synaptic paket yöneticisi açılır.&lt;strong&gt;compiz-plugins-extra&lt;/strong&gt; paketi seçilir ve kurulur.&lt;/p&gt;
+
+&lt;p&gt;Compiz Ayarları Yöneticisini açmak için &lt;strong&gt;Sistem&amp;gt;Tercihler&amp;gt;CompizConfig Settings Manager&lt;/strong&gt; sırası izlenir. &lt;br /&gt;Görsel efektleri aktif hale getirmek için : &lt;br /&gt;-&amp;gt;Masaüstünde boş bir alana sağ tuş ile tıklayın &lt;br /&gt;-&amp;gt;Açılan menünün en altında Masaüstü Artalanını Değiştir&amp;#8217;i seçin. &lt;br /&gt;-&amp;gt;Görsel efektler sekmesinden Özel kutucuğunu işaretleyin. &lt;br /&gt; &lt;br /&gt; &lt;img src='http://img690.imageshack.us/img690/2639/400pxcompizz.jpg' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu seçeneğin yanında bulunan &lt;strong&gt;Tercihler&lt;/strong&gt; bölümünden çeşitli ayarlamalar yapabilirsiniz. Canlandırmalar sekmesindeki &lt;strong&gt;Open Window&lt;/strong&gt; ve &lt;strong&gt;Close Window&lt;/strong&gt; seçeneklerinde yapacağınız değişiklerle pencerelerinizin açılış ve kapanışında örneğin Alev, Kağıt Uçak, Sihirli Lamba gibi değişik animasyonları kullanabilirsiniz. &lt;br /&gt; &lt;br /&gt; &lt;img src='http://img51.imageshack.us/img51/3613/300pxcomp2.jpg' /&gt; &lt;br /&gt; &lt;br /&gt; &lt;strong&gt;Compiz İçin Bazı Kısayol Tuşları&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(Super denilen tuş, klavyedeki Windows tuşudur.)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Küp kullanarak diğer masaüstüne geçiş: Ctr + Alt + Klavye Sağ Tuşu/Sol Tuşu&lt;/li&gt;
+
+&lt;li&gt;Küpü döndürme çevirme: Ctrl + Alt basılı iken Fare Sol Tuşla masaüstü tutulur ve döndürülür.&lt;/li&gt;
+
+&lt;li&gt;Masaüstlerini tek zemine toplama: Ctrl + Alt + Klavye Aşağı Tuşu&lt;/li&gt;
+
+&lt;li&gt;Pencere yakalayıcı: Shift + Alt + Klavye Üst Tuşu&lt;/li&gt;
+
+&lt;li&gt;Ring tab: Super + Tab&lt;/li&gt;
+
+&lt;li&gt;Pencere Taşıma: Alt + F7&lt;/li&gt;
+
+&lt;li&gt;Alev çizme Super + Shift basılı iken farenin sol tuşu ile yazılır. Super + Shift + C temizler.&lt;/li&gt;
+
+&lt;li&gt;Su efekti: Shift + F9 açar ve kapatır. Shift + F8 sileceği açar kapatır.&lt;/li&gt;
+
+&lt;li&gt;Ekrana kırmızı çizim (Annonate) Alt + Super + Fare sol tuşu ile çizilir Alt + Super + k temizler.&lt;/li&gt;
+
+&lt;li&gt;Expo Super + E&lt;/li&gt;
+
+&lt;li&gt;Animasyosyonları Yavaşlatma Shift + F10&lt;/li&gt;
+&lt;/ol&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Tarayıcı kısayol tuşları</title>
+   <link href="http://ferhatakblt.github.com/906/Taray%C4%B1c%C4%B1-K%C4%B1sayol-Tu%C5%9Flar%C4%B1"/>
+   <updated>2011-06-04T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/906/Tarayıcı-Kısayol-Tuşları</id>
+   <content type="html">&lt;p&gt;Tarayıcı Kısayolları&lt;/p&gt;
+
+&lt;p&gt;  Web’de sörf yaparken sihirli tuş kombinasyonlarını kullanarak işinizi bir hayli kolaylaştırabilirsiniz. Artık bilgisayar kullanıcılarının büyük zamanıweb tarayıcılar üzerinden internettedolaşmakla geçiyor. Sayısı artan onlineservisler ve internet içeriğine evde, işte ve okulda tarayıcıları kullanarak erişiyoruz. Bu hayati yazılımların tuş kombinasyonlarıyla sunduğu kolaylıklar bu yüzden kullanıcılar için çok değerli.&lt;/p&gt;
+
+&lt;p&gt;CTRL – Enter&lt;br /&gt; IE, Firefox, Opera, Safari, Chrome&lt;br /&gt; Tarayıcınızın adres çubuğuna www. İle başlayan ve .com uzantısı ile biten bir adres yazmanız gerektiğinde, adresin yalnızca ortadaki kısmını girdikten sonra CTRL tuşu ile birlikte Enter tuşuna basarsanız, tarayıcınız adresin başındaki ve sonundaki bölümlerini otomatik olarak ekleyecektir.&lt;/p&gt;
+
+&lt;p&gt;ALT – D&lt;br /&gt; Firefox, Safari, Chrome&lt;br /&gt; Herhangi bir sayfada içeriği incelerken farklı bir adrese gitmek için adres çubuğuna yeniden adres yazmak istediğinizde elinizi fareye götürmek zorunda değilsiniz. Fareyle adres çubuğuna tıklamak yerine ALT tuşuyla birlikte D tuşuna basmanız, adres çubuğunun aktif hale gelmesi için yeterli olacaktır. Aynı görevi Internet Explorer’da ALT – A tuş kombinasyonu yerine getiriyor.&lt;/p&gt;
+
+&lt;p&gt;CTRL – fare tekerleği&lt;br /&gt; IE, Firefox, Opera, Safari, Chrome&lt;br /&gt; İncelemekte olduğunuz sayfayı büyütmek ya da küçültmek istediğinizde, tarayıcınızın arayüzündeki yakınlaştırma bölümüne mecbur değilsiniz. Klavyenizdeki CTRL tuşunu basılı tutarak farenizin tekerleğini çevirdiğinizde, sayfadaki içeriğin büyütülüp küçültüldüğünü göreceksiniz. Chrome ve Safari bu durumda yalnızca metinlerin boyutunu değiştirirken,Internet Explorer, Firefox ve Opera sayfada bulunan resimleri de büyütüp küçültüyor.&lt;/p&gt;
+
+&lt;p&gt;CTRL – T&lt;br /&gt; IE, Firefox, Opera, Safari, Chrome&lt;br /&gt; Sekmeli tarama, artık tüm modern tarayıcılar için standart bir özellik. Yeni bir sayfa açmak için yeni bir pencere kullanmak yerine mevcut pencerenin içinde yeni bir sekme açmak gerçekten çok kullanışlı. Sörf sırasında yeni bir sekme açmak için klavyenizdeki CTRL tuşu ile birlikte T tuşuna basmanız yeterli.&lt;/p&gt;
+
+&lt;p&gt;CTRL – F4&lt;br /&gt; IE, Firefox, Opera, Safari, Chrome&lt;br /&gt; Yeni bir sekme açmanın kısa yolundan bahsettikten hemen sonra, sekmeleri kapatmak için kullanılabilecek bir kısa yoldan bahsedelim. Klavyenizdeki CTRL tuşuyla birlikte F4 tuşuna basmanız durumunda, aktif olan sekme kapatılacaktır. Tarayıcınızda yalnızca bir sekme açıkken bu işlemi yaptığınızda Internet Explorer ve Google Chrome tarayıcıyı tümden kapatırken, Firefox ve Opera ekranı boşaltıyor, Safari ise tepkisiz kalıyor.&lt;/p&gt;
+
+&lt;p&gt;CTRL – sol tuş&lt;br /&gt; IE, Firefox, Opera, Safari, Chrome&lt;br /&gt; Tarayıcınızda açık olan sayfada bulunan bir bağlantıya CTRL tuşunu basılı tutarak farenizin sol tuşu ile tıklamanız durumunda, hedef sayfa tarayıcınız içinde yeni bir sekmede açılacaktır. Aynı işi Shift tuşuyla yapmak Internet Explorer, Firefox ve Google Chrome’da bağlantının yeni bir pencerede açılmasını sağlıyor. Shift – sol tuş Safari’de herhangi bir tıklama gibi algılanırken Opera Shift’le birlikte tıklanan bağlantıyı yeni sekmede açıyor.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Ubuntu 3G Modem Kurulumu</title>
+   <link href="http://ferhatakblt.github.com/105/Ubutu-3G-Modem-Kurulumu"/>
+   <updated>2011-05-24T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/105/Ubutu-3G-Modem-Kurulumu</id>
+   <content type="html">&lt;p&gt;-&amp;gt;3G moden bilgisayara takılır.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt;Bilgisayar modemi tanıdıktan sonra modem sim pin kilidi penceresi ekrana gelir ve sonra modem şifresi girilir.&lt;/p&gt;
+&lt;img src='http://i52.tinypic.com/t7lkjm.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Şifre girildikten sonra &lt;strong&gt;Sistem-&amp;gt;Tercihler-&amp;gt;Ağ Bağlantıları&lt;/strong&gt; na girlir ( yada Ağ Bağlantıları simgesine tıklanır ve orada &lt;strong&gt;VPN Bağlantıları -&amp;gt; VPN Ayarları&lt;/strong&gt; sekmesi seçilir).&lt;/p&gt;
+&lt;img src='http://i52.tinypic.com/2dsimw2.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Gelen pencerede &lt;strong&gt;Mobil Geniş Bant&lt;/strong&gt; seçilir.&lt;/p&gt;
+&lt;img src='http://i53.tinypic.com/29lih6u.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Ekle butonu tıklanır.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt;İlk ekran seçili modemi gösterir ileri botununa tıklanarak bu sayfa geçilir.&lt;/p&gt;
+&lt;img src='http://i53.tinypic.com/2qm3plt.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Sonraki pencerede bulunduğumuz ülke seçilir ve ileri botunu tılanır.&lt;/p&gt;
+&lt;img src='http://i51.tinypic.com/302811c.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Sonraki pencerede modem sağlayıcısı seçilir ve ileri butonu tıklanır.(Turksell, Avea, Vodafone)&lt;/p&gt;
+&lt;img src='http://i53.tinypic.com/34zj290.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Aslında en önemli kısım burası.&lt;strong&gt;Planınızı seçin (Selection your plan)&lt;/strong&gt; kısmını Planım listede değil seçilir. &lt;strong&gt;APN&lt;/strong&gt; ismine &lt;strong&gt;mgb&lt;/strong&gt; yazmalıyız.Yoksa internete bağlanmada sıkıntı yaşayabiliriz.&lt;/p&gt;
+&lt;img src='http://i56.tinypic.com/15dukcn.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Son pencere onay penceresi ve uygula butonuna tıklayıp modemi bilgisayara tanıtmış olduk.&lt;/p&gt;
+&lt;img src='http://i51.tinypic.com/2elfe6u.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Eğer onay penceresinden sonra modem DNS ayaraları değiştime ekranı gelirse ayarları yapabilir yada bu kısmı es geçebiliriz.&lt;/p&gt;
+&lt;img src='http://i56.tinypic.com/e5npzp.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Ağ Bağlantıları penceresi kapatılır.&lt;/p&gt;
+&lt;img src='http://i54.tinypic.com/qppbog.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Şimdi sağ üst köşedeki Ağ bağlantısı simgesini tıklayıp modem için olan bağlantıyı seçiyoruz.&lt;/p&gt;
+&lt;img src='http://i55.tinypic.com/1z310ts.jpg' /&gt;
+&lt;p&gt;-&amp;gt;Ve internete bağlanmış olduk.&lt;/p&gt;
+&lt;img src='http://i56.tinypic.com/2weazvb.jpg' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Klavye kısa yolları</title>
+   <link href="http://ferhatakblt.github.com/905/Klavye-K%C4%B1sa-Yolar%C4%B1"/>
+   <updated>2011-05-17T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/905/Klavye-Kısa-Yoları</id>
+   <content type="html">&lt;p&gt;Genel klavye kısayolları&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Ctrl + A = Tümünü seç 
+Ctrl + C = Kopyala
+Ctrl + V = Yapıştır
+Ctrl + S = Geçerli belgeyi kaydet
+Ctrl + S + Shift = Geçerli belgeyi farklı kaydet
+Ctrl + W = Geçerli belgeyi Kapat
+Alt + Enter = Seçili ögenin özelliklerini göster
+Alt + Tab = Açık ögeler arasında geçiş yap
+Sift + F10 = Seçili ögenin seçenekler menüsünü göster
+Ctrl tuşu basılıyken seçili ögeler sürüklenirse seçili ögeler kopyalanır
+Ctrl + Shift tuşları basılıyken seçili ögeler sürüklenirse seçili ögelerin bağlantısı oluşur&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;GNOME masaüstü için klavye kısayolları&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Ctrl + Alt + GNOME yeniden başlatın = Backspace
+Ctrl + Alt + L = Kilit ekranı. 
+ALT + F1 = Uygulamalar kısmının menüleri açılır
+Alt + F2 = Uygulama Çalıştır iletişim kutusu açılır
+ALT + F3 = ------------- 
+Alt + F4 = Geçerli pencereyi kapatır
+Alt + F5 = Geçerli pencereyi unmaximizes et
+ALT + F7 = Geçerli pencereyi hareket ettir 
+ALT + F8 = Geçerli pencereyi boyutlandırır 
+ALT + F9 = Geçerli pencereyi minimize et
+ALT + F10 = Geçerli pencereyi maksimize et
+Alt + Space = Geçerli pencerenin menüsü açılır&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terminal için klavye kısayolları&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Ctrl + A = Satırın başına götür
+Ctrl + E = Satırın sonuna götür
+Ctrl + C = Geçirli süreci öldürür
+Ctrl + Z = -----------------
+Ctrl + D = Teminali kapat
+Ctrl + L = Terminal ekranını temizle 
+Ctrl + R = Harfler eşleşen önceden girilen komutu bulur
+Ctrl + U = Geçerli satırı sil
+Ctrl + K = Geçerli satırdaki imlecten sonrasını silme komutu
+Ctrl + W = Geçerli satırdaki imlecten öncesini silme komutu
+Shift + Ctrl + C = Terminal ekranında seçili olan kısmı kopyalama komutu
+Shift + Ctrl + V (veya Shift + Insert) = Kopyalanan içeriği terminal ekranına yapıştırır
+Alt + F = Bir kelime ileriye hamle
+Alt + B = Bir kelime geriye hamle
+Up / Down = Geçmiş komutlar
+Shift + PageUp / PageDown = Terminal ekranında ileri geri sayfa geçişi&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>DNS Ayarlarını Değiştirme</title>
+   <link href="http://ferhatakblt.github.com/105/DNS-Ayarlar%C4%B1n%C4%B1-De%C4%9Fi%C5%9Ftime"/>
+   <updated>2011-05-17T00:00:00+03:00</updated>
+   <id>http://ferhatakblt.github.com/105/DNS-Ayarlarını-Değiştime</id>
+   <content type="html">&lt;p&gt;Yapmanız gereken : &lt;br /&gt; Sistem-&amp;gt; Tercihler-&amp;gt; Ağ Bağlantıları&amp;#8217; na girerek karşımıza gelen ekranda &lt;b&gt;Auto eth0&lt;/b&gt; kısmını seçerek Düzenle ( Edit ) butonu ile değiştirmek istediğimiz DNS adresilerini gireceğimiz bölümüne ulaşacağız.&lt;/p&gt;
+
+&lt;p&gt;Düzenle(Edit) butonuna tıkladıktan sonra root şifremizi giriyoruz. &lt;br /&gt;IPv4 Ayarları kısmına geçip &lt;br /&gt;&lt;b&gt;Yöntem : Sadece otomatik (DHCP) adresleri&lt;/b&gt; olarak seçip, aşağıda bulunan &lt;br /&gt;&lt;b&gt;DNS sunucuları:&lt;/b&gt; isimli kutusuna &lt;code&gt;208.67.222.222,208.67.220.220&lt;/code&gt; aralarında bir adet virgül ekleyerek OpenDns&amp;#8217; DNS adreslerini girerek uygula butonuna tıklıyoruz. &lt;br /&gt;Son işlem olarak bağlantımızı kapatıp tekrar bağlanıyoruz.&lt;/p&gt;
+
+&lt;p&gt;Eklediğimiz DNS ayarlarının doğruluğunu kontrol etmek için &lt;code&gt;$ sudo cat /etc/resolv.conf&lt;/code&gt; komutunu kullanıyoruz&amp;#8230; Komutu girdikten sonra aşağıdaki gibi bir çıktı ile karşılaşmamız gerekiyor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo cat /etc/resolv.conf
+#Generated by NetworkManager
+nameserver 208.67.222.222
+nameserver 208.67.220.220&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Böylece kalıcı olarak Dns ayarlarımızı değiştirmiş oluyoruz.&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

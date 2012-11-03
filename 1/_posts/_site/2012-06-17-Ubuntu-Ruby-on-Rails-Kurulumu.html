@@ -1,0 +1,58 @@
+<p>Ruby on Rails kısaca RoR diyebiliriz. Kurulumu biraz zaman alabilir. Sadece sabır :) RoR web programlama için kullanılmaktadır..</p>
+
+<p><strong>RoR Kurlumu</strong></p>
+
+<p>İlk olarak Ruby 1.9.2 yi kurmalıyız. Ama önce bir kaç kütüphaneye ihtiyacımız var. Bunun için konsola</p>
+
+<pre><code>$ sudo apt-get -y install libc6-dev libssl-dev libmysql++-dev libsqlite3-dev make build-essential libssl-dev libreadline6-dev zlib1g-dev</code></pre>
+
+<p>yazıyoruz. İşlemi sonlandıktan sonra sistemimize Ruby kurabiliriz. Konsolu açıp</p>
+
+<pre><code>$ cd /tmp
+$ mkdir src
+$ cd src
+$ wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
+$ tar xjvf ruby-1.9.2-p0.tar.gz</code></pre>
+
+<p><strong>tar xjvf ruby-1.9.2-p0.tar.gz</strong> komutu çalışmaz ise <strong>/tmp/src</strong> dosyasını açıp indirdiğimiz <strong>ruby-1.9.2-p0.tar.gz</strong> tar dosyasını el ilede bulunduğumuz klasöre çıkarabiliriz. Bu adımı başarıyla geçtikten sonra devam edlim</p>
+
+<pre><code>$ cd ruby-1.9.2-p0/
+$ ./configure --prefix=/usr/local
+$ sudo make &amp;&amp; sudo make install </code></pre>
+
+<p>Bu komutların sonunda Ruby&#8217; yi kurmuş oldu. Ruby&#8217; nin sürümünü kontrol etmek için</p>
+
+<pre><code>$ ruby -v</code></pre>
+
+<p>yazarak şu çıktıyı alıyorsak sorun yok yola devam edebilriz.</p>
+
+<pre><code>çıktı =&gt; ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-linux]</code></pre>
+
+<p>Ruby 1.9.2 sistemimize kurludu. Hız kesmeden devam edelim. Sırada SQLite ve MySQL kurlumu var.</p>
+
+<p><strong>SQLite3 ve MySQL 5.1 kurulumu</strong></p>
+
+<pre><code>$ sudo apt-get install mysql-server-5.1 sqlite3</code></pre>
+
+<p>komutuyla sistemimize kurulumu gerçekleştiriyoruz. Mysql Server kurlum sırasında bizden şifre istiycek bu şifreyi unutmalım. Hız kesmeden devam edelim.</p>
+
+<p><strong>Rails ve gerekli gemlerin kurulumu</strong></p>
+
+<p>Şimdide sistemimize rails kuralım. Kurulumun tamamlanması biraz zaman alabilir. Sadece sabır :) &#8230;</p>
+
+<pre><code>$ sudo gem update --system
+$ sudo gem install tzinfo builder memcache-client rack rack-test erubis mail mysql text-format bundler thor i18n sqlite3-ruby
+$ sudo gem install rack-mount –version=0.4.0
+$ sudo gem install rails</code></pre>
+
+<p>Kurulum sırasında herhangi bir hata almadıysanız sisteminize <strong>Ruby 1.9.2 - SQLite3 ve MySQL 5.1 - Rails</strong> kurlumunu başarılı bir şekilde gerçekleştirdiniz demektir. Sisteme kurululan gemleri görmek için konsola</p>
+
+<pre><code>$ gem list</code></pre>
+
+<p>yazarak görebilrisiniz.<br /> <strong>Not</strong> Eğer siteminizde mysql2 yi kullanmak isterseniz konsola</p>
+
+<pre><code> $ sudo gem install mysql2</code></pre>
+
+<p>yazmanız yeterli olacaktır.</p>
+
+<p>RoR yani Ruby on Rails kurulumunu gerçekleştirdiniz. Kolay gelsin&#8230;</p>

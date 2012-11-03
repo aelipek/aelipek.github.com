@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Ferhat Akbulut" />
+  <meta name="google-site-verification" content="exHQNZWSRk95JxamUYBgnYIGJJeGLL8Z4VDr07iPT68" />
+  
+  <title>Compiz Kurulumu</title>
+  <link href="http://feeds.feedburner.com/" rel="alternate" title="Ferhat Akbulut" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/site.css"   type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/local.css"  type="text/css" media="screen, projection" />
+</head>
+
+<body>
+<div class="site">
+  <div class="title">
+    <!-- Navigator start -->
+
+<a href="http://ferhatakblt.github.com/" title="Ön Sayfa" id="navtop"></a>
+
+<span class="navigator">
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	
+	  <a href="http://ferhatakblt.github.com/1" title="Makaleler" id="navinactive1"></a>
+	
+      &nbsp;
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	<a href="http://ferhatakblt.github.com/9" title="Notlar" id="navactive9"></a>
+      &nbsp;
+    
+  
+</span>
+<!-- Navigator end -->
+
+    
+<a href="/" title="logo" id="logo" style="background-image:url('http://ferhatakblt.github.com/chrome/19/19-negative-128x128.png');"></a>
+
+
+
+  </div>
+
+  
+    <div id="post">
+
+<h1>Compiz Kurulumu</h1>
+
+<p>Linux işletim sistemlerinde Gnome ve KDE gibi masaüstleri üzerinde çeşitli efektleri yapmayı ve daha kullanışlı çalışmayı sunar.</p>
+
+<p><strong>İlk Ayarlar :</strong></p>
+
+<p>Öncelikle ekran kartının sürücüleri yüklenmiş olmalıdır.</p>
+
+<p>Compiz’i son sürümünü kullanmak için sources.list dosyasına compiz deposu eklemek için konsola şu komut girilir:</p>
+
+<pre><code>gksu gedit /etc/apt/sources.list</code></pre>
+
+<p>açılan dosyanın sonuna <strong>deb http://ppa.launchpad.net/compiz/ubuntu karmic main</strong> satırı eklenir.Değişiklikler kaydedilip dosya kapatılır.Aşağıdaki kod ile apt-get güncellenir:</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get upgrade</code></pre>
+
+<p><strong>Kurulum :</strong></p>
+
+<p>Compiz ayarları yöneticisinin kurlumu için :</p>
+
+<pre><code> sudo apt-get install compizconfig-settings-manager</code></pre>
+
+<p>ve ekstra özellikler için <strong>Sistem-&gt;Yönetim-&gt;Synaptik Paket Yöneticisi</strong> yolu izlenerek synaptic paket yöneticisi açılır.<strong>compiz-plugins-extra</strong> paketi seçilir ve kurulur.</p>
+
+<p>Compiz Ayarları Yöneticisini açmak için <strong>Sistem&gt;Tercihler&gt;CompizConfig Settings Manager</strong> sırası izlenir. <br />Görsel efektleri aktif hale getirmek için : <br />-&gt;Masaüstünde boş bir alana sağ tuş ile tıklayın <br />-&gt;Açılan menünün en altında Masaüstü Artalanını Değiştir&#8217;i seçin. <br />-&gt;Görsel efektler sekmesinden Özel kutucuğunu işaretleyin. <br /> <br /> <img src='http://img690.imageshack.us/img690/2639/400pxcompizz.jpg' /></p>
+
+<p>Bu seçeneğin yanında bulunan <strong>Tercihler</strong> bölümünden çeşitli ayarlamalar yapabilirsiniz. Canlandırmalar sekmesindeki <strong>Open Window</strong> ve <strong>Close Window</strong> seçeneklerinde yapacağınız değişiklerle pencerelerinizin açılış ve kapanışında örneğin Alev, Kağıt Uçak, Sihirli Lamba gibi değişik animasyonları kullanabilirsiniz. <br /> <br /> <img src='http://img51.imageshack.us/img51/3613/300pxcomp2.jpg' /> <br /> <br /> <strong>Compiz İçin Bazı Kısayol Tuşları</strong></p>
+
+<p>(Super denilen tuş, klavyedeki Windows tuşudur.)</p>
+
+<ol>
+<li>Küp kullanarak diğer masaüstüne geçiş: Ctr + Alt + Klavye Sağ Tuşu/Sol Tuşu</li>
+
+<li>Küpü döndürme çevirme: Ctrl + Alt basılı iken Fare Sol Tuşla masaüstü tutulur ve döndürülür.</li>
+
+<li>Masaüstlerini tek zemine toplama: Ctrl + Alt + Klavye Aşağı Tuşu</li>
+
+<li>Pencere yakalayıcı: Shift + Alt + Klavye Üst Tuşu</li>
+
+<li>Ring tab: Super + Tab</li>
+
+<li>Pencere Taşıma: Alt + F7</li>
+
+<li>Alev çizme Super + Shift basılı iken farenin sol tuşu ile yazılır. Super + Shift + C temizler.</li>
+
+<li>Su efekti: Shift + F9 açar ve kapatır. Shift + F8 sileceği açar kapatır.</li>
+
+<li>Ekrana kırmızı çizim (Annonate) Alt + Super + Fare sol tuşu ile çizilir Alt + Super + k temizler.</li>
+
+<li>Expo Super + E</li>
+
+<li>Animasyosyonları Yavaşlatma Shift + F10</li>
+</ol>
+
+
+</div>
+
+
+
+<!-- Related start -->
+<div id="related">
+  <h2>Diğer Girdiler</h2>
+  <ul class="posts">
+    
+      <li>
+	<span>2012-06-17</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu">Ruby on Rails Kurulumu</a>
+      </li>
+    
+      <li>
+	<span>2012-05-10</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/105/main-Fonksiyonuna-Arg%C3%BCman-Aktar%C4%B1m%C4%B1">main Fonksiyonuna Argüman Aktarımı</a>
+      </li>
+    
+      <li>
+	<span>2012-01-05</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutlar%C4%B1">Temel Linux Konsol Komutları</a>
+      </li>
+    
+  </ul>
+</div>
+<!-- Related end -->
+
+
+
+<!-- Disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /*
+   * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+   */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://ferhatakblt.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Lütfen bu sayfaya gelen <a href="http://disqus.com/?ref_noscript=ferhatakblt">yorumları</a> görmek için tarayıcınızın JavaScript desteğini etkinleştirin.</noscript>
+<!-- Disqus end -->
+
+
+
+
+  
+  
+  <div class="footer">
+    <div class="contact">
+  <p>
+    Ferhat Akbulut<br />
+    <a href="http://ondokuz.biz/">19</a> üyesi<br />
+    fbulut@bil.omu.edu.tr<br />
+    
+  </p>
+</div>
+<div class="contact">
+  <p>
+    <a href="http://github.com/ferhatakblt/">github.com/ferhatakblt</a><br />
+    <a href="http://19.status.net/ferhatakblt/">http://19.status.net/ferhatakblt</a><br />
+    
+      <a href="http://facebook.com/ferhat.akblt/">http://facebook.com/ferhat.akblt</a><br />
+    
+    
+  </p>
+</div>
+
+    
+
+    
+<div class="rss">
+  <a href="http://feeds.feedburner.com/">
+    <img src="http://ferhatakblt.github.com/chrome/sembol/feed-64.png" alt="Özet Akışı" />
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="ribbon">
+  <a href="http://github.com/ferhatakblt/ferhatakblt.github.com" rel="me" alt="GitHub'dayım">GitHub'dayım</a>
+</div>
+
+
+
+<!-- Google Analytics start -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27383708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics end -->
+
+
+
+</body>
+</html>
+

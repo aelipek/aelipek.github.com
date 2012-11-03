@@ -1,0 +1,63 @@
+<p>main() fonksiyonunun argüman almadığını belirtmek için <strong>void</strong> ( main(void) ) yapısını kullanıyorduk. Şimdi ise main() fonsiyonuna nasıl argüman aktarılacağını göstereceğiz.</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+int main(int argc,int *argv[]){
+int i;
+for(i=0;i&lt;argc;i++){
+	puts(argv[i]);
+}
+
+return 0;
+}</code></pre>
+
+<p>örnek kodumuzu deneme.c adıyla masaüstüne kaydediyoruz. Sonra komut satırına</p>
+
+<pre><code>~$ cd Masaüstü  		//masaüsütüne geçiyoruz
+~$ gcc deneme.c -o deneme       // gcc programı &quot;deneme&quot; adında çalıştırılabilir bir dosya oluşturacaktır.</code></pre>
+
+<p>Şimdi kodumuza argüman göndererek çalıştırmayı deneyelim.</p>
+
+<pre><code>~$ ./deneme ferhat Akbulut</code></pre>
+
+<p>Çıktımız ;</p>
+
+<pre><code>./deneme
+ferhat
+akbulut</code></pre>
+
+<p>şeklinde olacaktır. main fonksiyonunun parametreleri <strong>int</strong> ve <strong>char</strong>** türlerinden oluşabiliyor. <strong>argc</strong> parametresi program ismi dahil komut satırı argümanlarının sayısını belirtir. Yani <strong><em>./deneme, ferhat, Akbulut</em></strong> ifadeleri komut satırı argümanlarımızdır. <strong>argv</strong> ifademiz ise komut satırı argümanlarını oluşturan yazıların adreslerinin yerleştiği dizinin adresini belirtmektedir. Yani argv bir pointer dır. Başka bir örnek yapalım ;</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+void ters_cevir(char katar[]);
+int main(int argc,int *argv[]){
+	int i;
+	for(i=0;i&lt;argc;i++){
+	
+		ters_cevir(argv[i]);
+		printf(&quot;\n&quot;);
+	}
+	printf(&quot;\n&quot;);
+
+	return 0;
+
+}
+void ters_cevir(char katar[]){
+	int i,uz;
+	uz=strlen(katar)-1;
+	for(;uz&gt;=0;uz--){
+		printf(&quot;%c&quot;,katar[uz]);
+	}
+}</code></pre>
+
+<p>Program çalıştığında kendisine verilen argümanları tersten yazacaktır. Programı deneme_2.c adıyla kaydediyoruz.</p>
+
+<pre><code>~$ gcc deneme_2.c -o deneme_2	
+~$ ./deneme_2 ferhat Akbulut	</code></pre>
+
+<p>Ekran çıktımız;</p>
+
+<pre><code>2_emneed
+tahref
+tulubkA</code></pre>
+
+<p>şeklinde olacaktır.</p>

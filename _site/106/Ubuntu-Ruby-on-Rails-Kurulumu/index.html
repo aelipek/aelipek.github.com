@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Ferhat Akbulut" />
+  <meta name="google-site-verification" content="exHQNZWSRk95JxamUYBgnYIGJJeGLL8Z4VDr07iPT68" />
+  
+  <title>Ruby on Rails Kurulumu</title>
+  <link href="http://feeds.feedburner.com/" rel="alternate" title="Ferhat Akbulut" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/site.css"   type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/local.css"  type="text/css" media="screen, projection" />
+</head>
+
+<body>
+<div class="site">
+  <div class="title">
+    <!-- Navigator start -->
+
+<a href="http://ferhatakblt.github.com/" title="Ön Sayfa" id="navtop"></a>
+
+<span class="navigator">
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	
+	  <a href="http://ferhatakblt.github.com/1" title="Makaleler" id="navinactive1"></a>
+	
+      &nbsp;
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	<a href="http://ferhatakblt.github.com/9" title="Notlar" id="navactive9"></a>
+      &nbsp;
+    
+  
+</span>
+<!-- Navigator end -->
+
+    
+<a href="/" title="logo" id="logo" style="background-image:url('http://ferhatakblt.github.com/chrome/19/19-negative-128x128.png');"></a>
+
+
+
+  </div>
+
+  
+    <div id="post">
+
+<h1>Ruby on Rails Kurulumu</h1>
+
+<p>Ruby on Rails kısaca RoR diyebiliriz. Kurulumu biraz zaman alabilir. Sadece sabır :) RoR web programlama için kullanılmaktadır..</p>
+
+<p><strong>RoR Kurlumu</strong></p>
+
+<p>İlk olarak Ruby 1.9.2 yi kurmalıyız. Ama önce bir kaç kütüphaneye ihtiyacımız var. Bunun için konsola</p>
+
+<pre><code>$ sudo apt-get -y install libc6-dev libssl-dev libmysql++-dev libsqlite3-dev make build-essential libssl-dev libreadline6-dev zlib1g-dev</code></pre>
+
+<p>yazıyoruz. İşlemi sonlandıktan sonra sistemimize Ruby kurabiliriz. Konsolu açıp</p>
+
+<pre><code>$ cd /tmp
+$ mkdir src
+$ cd src
+$ wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
+$ tar xjvf ruby-1.9.2-p0.tar.gz</code></pre>
+
+<p><strong>tar xjvf ruby-1.9.2-p0.tar.gz</strong> komutu çalışmaz ise <strong>/tmp/src</strong> dosyasını açıp indirdiğimiz <strong>ruby-1.9.2-p0.tar.gz</strong> tar dosyasını el ilede bulunduğumuz klasöre çıkarabiliriz. Bu adımı başarıyla geçtikten sonra devam edlim</p>
+
+<pre><code>$ cd ruby-1.9.2-p0/
+$ ./configure --prefix=/usr/local
+$ sudo make &amp;&amp; sudo make install </code></pre>
+
+<p>Bu komutların sonunda Ruby&#8217; yi kurmuş oldu. Ruby&#8217; nin sürümünü kontrol etmek için</p>
+
+<pre><code>$ ruby -v</code></pre>
+
+<p>yazarak şu çıktıyı alıyorsak sorun yok yola devam edebilriz.</p>
+
+<pre><code>çıktı =&gt; ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-linux]</code></pre>
+
+<p>Ruby 1.9.2 sistemimize kurludu. Hız kesmeden devam edelim. Sırada SQLite ve MySQL kurlumu var.</p>
+
+<p><strong>SQLite3 ve MySQL 5.1 kurulumu</strong></p>
+
+<pre><code>$ sudo apt-get install mysql-server-5.1 sqlite3</code></pre>
+
+<p>komutuyla sistemimize kurulumu gerçekleştiriyoruz. Mysql Server kurlum sırasında bizden şifre istiycek bu şifreyi unutmalım. Hız kesmeden devam edelim.</p>
+
+<p><strong>Rails ve gerekli gemlerin kurulumu</strong></p>
+
+<p>Şimdide sistemimize rails kuralım. Kurulumun tamamlanması biraz zaman alabilir. Sadece sabır :) &#8230;</p>
+
+<pre><code>$ sudo gem update --system
+$ sudo gem install tzinfo builder memcache-client rack rack-test erubis mail mysql text-format bundler thor i18n sqlite3-ruby
+$ sudo gem install rack-mount –version=0.4.0
+$ sudo gem install rails</code></pre>
+
+<p>Kurulum sırasında herhangi bir hata almadıysanız sisteminize <strong>Ruby 1.9.2 - SQLite3 ve MySQL 5.1 - Rails</strong> kurlumunu başarılı bir şekilde gerçekleştirdiniz demektir. Sisteme kurululan gemleri görmek için konsola</p>
+
+<pre><code>$ gem list</code></pre>
+
+<p>yazarak görebilrisiniz.<br /> <strong>Not</strong> Eğer siteminizde mysql2 yi kullanmak isterseniz konsola</p>
+
+<pre><code> $ sudo gem install mysql2</code></pre>
+
+<p>yazmanız yeterli olacaktır.</p>
+
+<p>RoR yani Ruby on Rails kurulumunu gerçekleştirdiniz. Kolay gelsin&#8230;</p>
+
+
+</div>
+
+
+
+<!-- Related start -->
+<div id="related">
+  <h2>Diğer Girdiler</h2>
+  <ul class="posts">
+    
+      <li>
+	<span>2012-06-30</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/106/Terminalden-C-Kodu-Derleme">Terminalden C kodu derleme</a>
+      </li>
+    
+      <li>
+	<span>2012-05-10</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/105/main-Fonksiyonuna-Arg%C3%BCman-Aktar%C4%B1m%C4%B1">main Fonksiyonuna Argüman Aktarımı</a>
+      </li>
+    
+      <li>
+	<span>2012-01-05</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutlar%C4%B1">Temel Linux Konsol Komutları</a>
+      </li>
+    
+  </ul>
+</div>
+<!-- Related end -->
+
+
+
+<!-- Disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /*
+   * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+   */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://ferhatakblt.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Lütfen bu sayfaya gelen <a href="http://disqus.com/?ref_noscript=ferhatakblt">yorumları</a> görmek için tarayıcınızın JavaScript desteğini etkinleştirin.</noscript>
+<!-- Disqus end -->
+
+
+
+
+  
+  
+  <div class="footer">
+    <div class="contact">
+  <p>
+    Ferhat Akbulut<br />
+    <a href="http://ondokuz.biz/">19</a> üyesi<br />
+    fbulut@bil.omu.edu.tr<br />
+    
+  </p>
+</div>
+<div class="contact">
+  <p>
+    <a href="http://github.com/ferhatakblt/">github.com/ferhatakblt</a><br />
+    <a href="http://19.status.net/ferhatakblt/">http://19.status.net/ferhatakblt</a><br />
+    
+      <a href="http://facebook.com/ferhat.akblt/">http://facebook.com/ferhat.akblt</a><br />
+    
+    
+  </p>
+</div>
+
+    
+
+    
+<div class="rss">
+  <a href="http://feeds.feedburner.com/">
+    <img src="http://ferhatakblt.github.com/chrome/sembol/feed-64.png" alt="Özet Akışı" />
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="ribbon">
+  <a href="http://github.com/ferhatakblt/ferhatakblt.github.com" rel="me" alt="GitHub'dayım">GitHub'dayım</a>
+</div>
+
+
+
+<!-- Google Analytics start -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27383708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics end -->
+
+
+
+</body>
+</html>
+

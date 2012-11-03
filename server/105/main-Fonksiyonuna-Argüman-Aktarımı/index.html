@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Ferhat Akbulut" />
+  <meta name="google-site-verification" content="exHQNZWSRk95JxamUYBgnYIGJJeGLL8Z4VDr07iPT68" />
+  
+  <title>main Fonksiyonuna Argüman Aktarımı</title>
+  <link href="http://feeds.feedburner.com/" rel="alternate" title="Ferhat Akbulut" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/site.css"   type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/local.css"  type="text/css" media="screen, projection" />
+</head>
+
+<body>
+<div class="site">
+  <div class="title">
+    <!-- Navigator start -->
+
+<a href="http://ferhatakblt.github.com/" title="Ön Sayfa" id="navtop"></a>
+
+<span class="navigator">
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	
+	  <a href="http://ferhatakblt.github.com/1" title="Makaleler" id="navinactive1"></a>
+	
+      &nbsp;
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	<a href="http://ferhatakblt.github.com/9" title="Notlar" id="navactive9"></a>
+      &nbsp;
+    
+  
+</span>
+<!-- Navigator end -->
+
+    
+<a href="/" title="logo" id="logo" style="background-image:url('http://ferhatakblt.github.com/chrome/19/19-negative-128x128.png');"></a>
+
+
+
+  </div>
+
+  
+    <div id="post">
+
+<h1>main Fonksiyonuna Argüman Aktarımı</h1>
+
+<p>main() fonksiyonunun argüman almadığını belirtmek için <strong>void</strong> ( main(void) ) yapısını kullanıyorduk. Şimdi ise main() fonsiyonuna nasıl argüman aktarılacağını göstereceğiz.</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+int main(int argc,int *argv[]){
+int i;
+for(i=0;i&lt;argc;i++){
+	puts(argv[i]);
+}
+
+return 0;
+}</code></pre>
+
+<p>örnek kodumuzu deneme.c adıyla masaüstüne kaydediyoruz. Sonra komut satırına</p>
+
+<pre><code>~$ cd Masaüstü  		//masaüsütüne geçiyoruz
+~$ gcc deneme.c -o deneme       // gcc programı &quot;deneme&quot; adında çalıştırılabilir bir dosya oluşturacaktır.</code></pre>
+
+<p>Şimdi kodumuza argüman göndererek çalıştırmayı deneyelim.</p>
+
+<pre><code>~$ ./deneme ferhat Akbulut</code></pre>
+
+<p>Çıktımız ;</p>
+
+<pre><code>./deneme
+ferhat
+akbulut</code></pre>
+
+<p>şeklinde olacaktır. main fonksiyonunun parametreleri <strong>int</strong> ve <strong>char</strong>** türlerinden oluşabiliyor. <strong>argc</strong> parametresi program ismi dahil komut satırı argümanlarının sayısını belirtir. Yani <strong><em>./deneme, ferhat, Akbulut</em></strong> ifadeleri komut satırı argümanlarımızdır. <strong>argv</strong> ifademiz ise komut satırı argümanlarını oluşturan yazıların adreslerinin yerleştiği dizinin adresini belirtmektedir. Yani argv bir pointer dır. Başka bir örnek yapalım ;</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+void ters_cevir(char katar[]);
+int main(int argc,int *argv[]){
+	int i;
+	for(i=0;i&lt;argc;i++){
+	
+		ters_cevir(argv[i]);
+		printf(&quot;\n&quot;);
+	}
+	printf(&quot;\n&quot;);
+
+	return 0;
+
+}
+void ters_cevir(char katar[]){
+	int i,uz;
+	uz=strlen(katar)-1;
+	for(;uz&gt;=0;uz--){
+		printf(&quot;%c&quot;,katar[uz]);
+	}
+}</code></pre>
+
+<p>Program çalıştığında kendisine verilen argümanları tersten yazacaktır. Programı deneme_2.c adıyla kaydediyoruz.</p>
+
+<pre><code>~$ gcc deneme_2.c -o deneme_2	
+~$ ./deneme_2 ferhat Akbulut	</code></pre>
+
+<p>Ekran çıktımız;</p>
+
+<pre><code>2_emneed
+tahref
+tulubkA</code></pre>
+
+<p>şeklinde olacaktır.</p>
+
+
+</div>
+
+
+
+<!-- Related start -->
+<div id="related">
+  <h2>Diğer Girdiler</h2>
+  <ul class="posts">
+    
+      <li>
+	<span>2012-06-17</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu">Ruby on Rails Kurulumu</a>
+      </li>
+    
+      <li>
+	<span>2012-01-05</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutlar%C4%B1">Temel Linux Konsol Komutları</a>
+      </li>
+    
+      <li>
+	<span>2011-12-01</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/112/Masa%C3%BCst%C3%BC-Ayarlar%C4%B1n%C4%B1-S%C4%B1f%C4%B1rlama">Masaüstü Ayarlarını Sıfırlama</a>
+      </li>
+    
+  </ul>
+</div>
+<!-- Related end -->
+
+
+
+<!-- Disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /*
+   * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+   */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://ferhatakblt.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Lütfen bu sayfaya gelen <a href="http://disqus.com/?ref_noscript=ferhatakblt">yorumları</a> görmek için tarayıcınızın JavaScript desteğini etkinleştirin.</noscript>
+<!-- Disqus end -->
+
+
+
+
+  
+  
+  <div class="footer">
+    <div class="contact">
+  <p>
+    Ferhat Akbulut<br />
+    <a href="http://ondokuz.biz/">19</a> üyesi<br />
+    fbulut@bil.omu.edu.tr<br />
+    
+  </p>
+</div>
+<div class="contact">
+  <p>
+    <a href="http://github.com/ferhatakblt/">github.com/ferhatakblt</a><br />
+    <a href="http://19.status.net/ferhatakblt/">http://19.status.net/ferhatakblt</a><br />
+    
+      <a href="http://facebook.com/ferhat.akblt/">http://facebook.com/ferhat.akblt</a><br />
+    
+    
+  </p>
+</div>
+
+    
+
+    
+<div class="rss">
+  <a href="http://feeds.feedburner.com/">
+    <img src="http://ferhatakblt.github.com/chrome/sembol/feed-64.png" alt="Özet Akışı" />
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="ribbon">
+  <a href="http://github.com/ferhatakblt/ferhatakblt.github.com" rel="me" alt="GitHub'dayım">GitHub'dayım</a>
+</div>
+
+
+
+<!-- Google Analytics start -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27383708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics end -->
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<p>Linux işletim sistemlerinde Gnome ve KDE gibi masaüstleri üzerinde çeşitli efektleri yapmayı ve daha kullanışlı çalışmayı sunar.</p>
+
+<p><strong>İlk Ayarlar :</strong></p>
+
+<p>Öncelikle ekran kartının sürücüleri yüklenmiş olmalıdır.</p>
+
+<p>Compiz’i son sürümünü kullanmak için sources.list dosyasına compiz deposu eklemek için konsola şu komut girilir:</p>
+
+<pre><code>gksu gedit /etc/apt/sources.list</code></pre>
+
+<p>açılan dosyanın sonuna <strong>deb http://ppa.launchpad.net/compiz/ubuntu karmic main</strong> satırı eklenir.Değişiklikler kaydedilip dosya kapatılır.Aşağıdaki kod ile apt-get güncellenir:</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get upgrade</code></pre>
+
+<p><strong>Kurulum :</strong></p>
+
+<p>Compiz ayarları yöneticisinin kurlumu için :</p>
+
+<pre><code> sudo apt-get install compizconfig-settings-manager</code></pre>
+
+<p>ve ekstra özellikler için <strong>Sistem-&gt;Yönetim-&gt;Synaptik Paket Yöneticisi</strong> yolu izlenerek synaptic paket yöneticisi açılır.<strong>compiz-plugins-extra</strong> paketi seçilir ve kurulur.</p>
+
+<p>Compiz Ayarları Yöneticisini açmak için <strong>Sistem&gt;Tercihler&gt;CompizConfig Settings Manager</strong> sırası izlenir. <br />Görsel efektleri aktif hale getirmek için : <br />-&gt;Masaüstünde boş bir alana sağ tuş ile tıklayın <br />-&gt;Açılan menünün en altında Masaüstü Artalanını Değiştir&#8217;i seçin. <br />-&gt;Görsel efektler sekmesinden Özel kutucuğunu işaretleyin. <br /> <br /> <img src='http://img690.imageshack.us/img690/2639/400pxcompizz.jpg' /></p>
+
+<p>Bu seçeneğin yanında bulunan <strong>Tercihler</strong> bölümünden çeşitli ayarlamalar yapabilirsiniz. Canlandırmalar sekmesindeki <strong>Open Window</strong> ve <strong>Close Window</strong> seçeneklerinde yapacağınız değişiklerle pencerelerinizin açılış ve kapanışında örneğin Alev, Kağıt Uçak, Sihirli Lamba gibi değişik animasyonları kullanabilirsiniz. <br /> <br /> <img src='http://img51.imageshack.us/img51/3613/300pxcomp2.jpg' /> <br /> <br /> <strong>Compiz İçin Bazı Kısayol Tuşları</strong></p>
+
+<p>(Super denilen tuş, klavyedeki Windows tuşudur.)</p>
+
+<ol>
+<li>Küp kullanarak diğer masaüstüne geçiş: Ctr + Alt + Klavye Sağ Tuşu/Sol Tuşu</li>
+
+<li>Küpü döndürme çevirme: Ctrl + Alt basılı iken Fare Sol Tuşla masaüstü tutulur ve döndürülür.</li>
+
+<li>Masaüstlerini tek zemine toplama: Ctrl + Alt + Klavye Aşağı Tuşu</li>
+
+<li>Pencere yakalayıcı: Shift + Alt + Klavye Üst Tuşu</li>
+
+<li>Ring tab: Super + Tab</li>
+
+<li>Pencere Taşıma: Alt + F7</li>
+
+<li>Alev çizme Super + Shift basılı iken farenin sol tuşu ile yazılır. Super + Shift + C temizler.</li>
+
+<li>Su efekti: Shift + F9 açar ve kapatır. Shift + F8 sileceği açar kapatır.</li>
+
+<li>Ekrana kırmızı çizim (Annonate) Alt + Super + Fare sol tuşu ile çizilir Alt + Super + k temizler.</li>
+
+<li>Expo Super + E</li>
+
+<li>Animasyosyonları Yavaşlatma Shift + F10</li>
+</ol>

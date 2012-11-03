@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Ferhat Akbulut" />
+  <meta name="google-site-verification" content="exHQNZWSRk95JxamUYBgnYIGJJeGLL8Z4VDr07iPT68" />
+  
+  <title>Temel Linux Konsol Komutları</title>
+  <link href="http://feeds.feedburner.com/" rel="alternate" title="Ferhat Akbulut" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/site.css"   type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/local.css"  type="text/css" media="screen, projection" />
+</head>
+
+<body>
+<div class="site">
+  <div class="title">
+    <!-- Navigator start -->
+
+<a href="http://ferhatakblt.github.com/" title="Ön Sayfa" id="navtop"></a>
+
+<span class="navigator">
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	<a href="http://ferhatakblt.github.com/1" title="Makaleler" id="navactive1"></a>
+      &nbsp;
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	
+	  <a href="http://ferhatakblt.github.com/9" title="Notlar" id="navinactive9"></a>
+	
+      &nbsp;
+    
+  
+</span>
+<!-- Navigator end -->
+
+    
+<a href="/" title="logo" id="logo" style="background-image:url('http://ferhatakblt.github.com/chrome/19/19-negative-128x128.png');"></a>
+
+
+
+  </div>
+
+  
+    <div id="post">
+
+<h1>Temel Linux Konsol Komutları</h1>
+
+<p><strong>Yardım Alma</strong></p>
+
+<p>Çoğu komut yanına <strong>&#8211;help</strong> yazıldığında küçük bir bilgi verir. Buna ek olarak linux’ta binlerce dokümanın bulunduğu manual sayfaları vardır. Yapmanız gereken tek şey <strong>man</strong> komutundan sonra bilgi almak istediğiniz komutun adını yazmak.</p>
+
+<pre><code>komut –help: Komut hakkında kısa bilgi  
+man komut: Komut hakkında detaylı doküman</code></pre>
+
+<p><strong>Dosyaları Listeleme</strong></p>
+
+<p>Linux’ta bir dizindeki dosyaları listelemek için kullanılan komut <strong>ls</strong> dir. Ekrana sığmayan uzun listeleri göstermek için <strong>less</strong> komutuyla beraber kullanılabilir.</p>
+
+<pre><code>ls: Bulunduğun dizinin içeriğini göster
+ls -a: Bulunduğu dizini içeriğini ve dizindeki gizli dosyaları da göster 
+ls -l: Uzun listele (sahip, izinler, boyut ve tarih dahil) 
+ls | less: Uzun listeleri kısaltmak için</code></pre>
+
+<p><strong>Dizin değiştirme</strong></p>
+
+<p>Başka bir dizine geçmek için <strong>cd</strong> komutu kullanılır.</p>
+
+<pre><code>cd yol: yol dizinine geçer 
+cd ~: Sizin home dizininize geçer 
+cd -: Bir önceki dizine döner 
+cd..: Bir üst dizine geçer</code></pre>
+
+<p><strong>Dosya ve dizin yönetimi</strong></p>
+
+<p>Bir dizini veya dosyayı kopyalamak için <strong>cp</strong>, taşımak için <strong>mv</strong>, yeni klasör oluşturmak için <strong>mkdir</strong>, dosyayı silmek için <strong>rm</strong>, dizini ve içindeki dosyaları silmek için <strong>rm -R</strong>, boş bir dizini silmek için ise <strong>rmdir</strong> kullanılır.</p>
+
+<pre><code>cp kaynak hedef: Kaynaktan hedefe kopyalar 
+cp -R kaynak hedef: Önyineli(recursive) kopyalar 
+mkdir dizin: Yeni dizin yaratır 
+mv kaynak hedef: Dosyaları taşımak veya adlarını değiştirmek için 
+rm dosya: Dosyayı kaldırır 
+rm -R dizin: Önyineli kaldırır 
+rmdir dizin: Boş dizini kaldırır 
+touch dosya: Dosya varsa tarihini değiştirir, yoksa yaratır 
+pwd: Çalışılan dizinin ismini verir</code></pre>
+
+
+</div>
+
+
+
+<!-- Related start -->
+<div id="related">
+  <h2>Diğer Girdiler</h2>
+  <ul class="posts">
+    
+      <li>
+	<span>2012-06-17</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu">Ruby on Rails Kurulumu</a>
+      </li>
+    
+      <li>
+	<span>2012-05-10</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/105/main-Fonksiyonuna-Arg%C3%BCman-Aktar%C4%B1m%C4%B1">main Fonksiyonuna Argüman Aktarımı</a>
+      </li>
+    
+      <li>
+	<span>2011-12-01</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/112/Masa%C3%BCst%C3%BC-Ayarlar%C4%B1n%C4%B1-S%C4%B1f%C4%B1rlama">Masaüstü Ayarlarını Sıfırlama</a>
+      </li>
+    
+  </ul>
+</div>
+<!-- Related end -->
+
+
+
+<!-- Disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /*
+   * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+   */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://ferhatakblt.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Lütfen bu sayfaya gelen <a href="http://disqus.com/?ref_noscript=ferhatakblt">yorumları</a> görmek için tarayıcınızın JavaScript desteğini etkinleştirin.</noscript>
+<!-- Disqus end -->
+
+
+
+
+  
+  
+  <div class="footer">
+    <div class="contact">
+  <p>
+    Ferhat Akbulut<br />
+    <a href="http://ondokuz.biz/">19</a> üyesi<br />
+    fbulut@bil.omu.edu.tr<br />
+    
+  </p>
+</div>
+<div class="contact">
+  <p>
+    <a href="http://github.com/ferhatakblt/">github.com/ferhatakblt</a><br />
+    <a href="http://19.status.net/ferhatakblt/">http://19.status.net/ferhatakblt</a><br />
+    
+      <a href="http://facebook.com/ferhat.akblt/">http://facebook.com/ferhat.akblt</a><br />
+    
+    
+  </p>
+</div>
+
+    
+
+    
+<div class="rss">
+  <a href="http://feeds.feedburner.com/">
+    <img src="http://ferhatakblt.github.com/chrome/sembol/feed-64.png" alt="Özet Akışı" />
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="ribbon">
+  <a href="http://github.com/ferhatakblt/ferhatakblt.github.com" rel="me" alt="GitHub'dayım">GitHub'dayım</a>
+</div>
+
+
+
+<!-- Google Analytics start -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27383708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics end -->
+
+
+
+</body>
+</html>
+

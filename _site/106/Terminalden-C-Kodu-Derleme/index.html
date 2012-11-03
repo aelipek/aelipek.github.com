@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Ferhat Akbulut" />
+  <meta name="google-site-verification" content="exHQNZWSRk95JxamUYBgnYIGJJeGLL8Z4VDr07iPT68" />
+  
+  <title>Terminalden C kodu derleme</title>
+  <link href="http://feeds.feedburner.com/" rel="alternate" title="Ferhat Akbulut" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/site.css"   type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="http://ferhatakblt.github.com/chrome/local.css"  type="text/css" media="screen, projection" />
+</head>
+
+<body>
+<div class="site">
+  <div class="title">
+    <!-- Navigator start -->
+
+<a href="http://ferhatakblt.github.com/" title="Ön Sayfa" id="navtop"></a>
+
+<span class="navigator">
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	
+	  <a href="http://ferhatakblt.github.com/1" title="Makaleler" id="navinactive1"></a>
+	
+      &nbsp;
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      
+	<a href="http://ferhatakblt.github.com/9" title="Notlar" id="navactive9"></a>
+      &nbsp;
+    
+  
+</span>
+<!-- Navigator end -->
+
+    
+<a href="/" title="logo" id="logo" style="background-image:url('http://ferhatakblt.github.com/chrome/19/19-negative-128x128.png');"></a>
+
+
+
+  </div>
+
+  
+    <div id="post">
+
+<h1>Terminalden C kodu derleme</h1>
+
+<p>Örnek programımız aşağıdaki şekilde olsun.</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+int main(){
+	printf(&quot;Ferhat AKBULUT\n&quot;);
+	return 0;
+}</code></pre>
+
+<p>Programımızı <strong>deneme.c</strong> isminde masaüstüne kaydediyoruz. Kodumuzu terminalden (konsoldan) derleyip çalıştırmka için 2 yöntem kullanılmaktadır.</p>
+
+<p><strong>Yöntem - 1</strong></p>
+
+<p>Terminali açıp</p>
+
+<pre><code>cd Masaüstü</code></pre>
+
+<p>yazarak masaüsütüne geçiyoruz. Daha sonra <strong>deneme.c</strong> isimindeki programımızı derleyip çalıştırmak için</p>
+
+<pre><code>cc deneme.c
+/.a.out</code></pre>
+
+<p>komutlarını terminalden giriyoruz ve ekran çıktımızı terminal ekranından alıyoruz. Masaüstünde oluşan <strong>a.out</strong> dosyası oluştuğunu görüceksiniz. a.out sistem tarafından oluşturulur.</p>
+
+<pre><code>Ferhat AKBULUT</code></pre>
+
+<p><strong>Yöntem - 2</strong></p>
+
+<p>Programımızı <strong>gcc</strong> ile derlemek. Bunun için öncelikle sistemimize <strong>gcc</strong> kurmalıyız. Terminmalden (konsoldan)</p>
+
+<pre><code>sudo apt-get install gcc</code></pre>
+
+<p>yazarak sistemimize gcc yi kuruyoruz. gcc yani <strong>GNU Compiler Collection</strong> günümüzde bir çok programlama dilini destekleyen bir derleyicidir. GNU işletim sisteminin resmi derleyicisi olmanın yanı sıra, diğer bir çok modern Unix benzeri işletim sistemleri tarafından standart derleyici olarak benimsenmiştir. gcc hakkında kısa bir bilgi verdikten sonra şimdi programımızı derleyip ekran çıktısı alalım.</p>
+
+<pre><code>cd Masaüstü
+gcc deneme.c -o deneme
+./deneme</code></pre>
+
+<p>komutları ile ekran çıktısı alabaliriz. Ekran çıktımız aşağıdaki gibi olmaktadır.</p>
+
+<pre><code>Ferhat AKBULUT</code></pre>
+
+<p><strong>deneme</strong> isminde ayrı bir dosyaoluşturulduğunu görüceksiniz. Verilen ismi değiştirebiliriz. Örneğin</p>
+
+<pre><code>gcc deneme.c -o fehat
+./ferhat</code></pre>
+
+<p>bu defa <strong>ferhat</strong> isimli bir dosya oluşacaktır. Bizde bu dosyayı çalıştırıyoruz.</p>
+
+
+</div>
+
+
+
+<!-- Related start -->
+<div id="related">
+  <h2>Diğer Girdiler</h2>
+  <ul class="posts">
+    
+      <li>
+	<span>2012-06-17</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/106/Ubuntu-Ruby-on-Rails-Kurulumu">Ruby on Rails Kurulumu</a>
+      </li>
+    
+      <li>
+	<span>2012-05-10</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/105/main-Fonksiyonuna-Arg%C3%BCman-Aktar%C4%B1m%C4%B1">main Fonksiyonuna Argüman Aktarımı</a>
+      </li>
+    
+      <li>
+	<span>2012-01-05</span>
+	&nbsp;&raquo;&nbsp;&nbsp;
+	<a href="http://ferhatakblt.github.com/901/Temel-Linux-Konsol-Komutlar%C4%B1">Temel Linux Konsol Komutları</a>
+      </li>
+    
+  </ul>
+</div>
+<!-- Related end -->
+
+
+
+<!-- Disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /*
+   * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+   */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://ferhatakblt.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Lütfen bu sayfaya gelen <a href="http://disqus.com/?ref_noscript=ferhatakblt">yorumları</a> görmek için tarayıcınızın JavaScript desteğini etkinleştirin.</noscript>
+<!-- Disqus end -->
+
+
+
+
+  
+  
+  <div class="footer">
+    <div class="contact">
+  <p>
+    Ferhat Akbulut<br />
+    <a href="http://ondokuz.biz/">19</a> üyesi<br />
+    fbulut@bil.omu.edu.tr<br />
+    
+  </p>
+</div>
+<div class="contact">
+  <p>
+    <a href="http://github.com/ferhatakblt/">github.com/ferhatakblt</a><br />
+    <a href="http://19.status.net/ferhatakblt/">http://19.status.net/ferhatakblt</a><br />
+    
+      <a href="http://facebook.com/ferhat.akblt/">http://facebook.com/ferhat.akblt</a><br />
+    
+    
+  </p>
+</div>
+
+    
+
+    
+<div class="rss">
+  <a href="http://feeds.feedburner.com/">
+    <img src="http://ferhatakblt.github.com/chrome/sembol/feed-64.png" alt="Özet Akışı" />
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="ribbon">
+  <a href="http://github.com/ferhatakblt/ferhatakblt.github.com" rel="me" alt="GitHub'dayım">GitHub'dayım</a>
+</div>
+
+
+
+<!-- Google Analytics start -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27383708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics end -->
+
+
+
+</body>
+</html>
+
