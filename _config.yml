@@ -1,0 +1,41 @@
+permalink: /:categories:month/:title
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+pygments: true
+url: http://aelipek.github.com
+exclude:
+        - Rakefile
+        - Makefile
+        - presentation.md
+        - presentation.html
+        - presentation.png
+        - media
+
+account: aelipek
+archive: Son Girdiler
+assets: /assets
+author: Abdullah elipek
+disqus: ~
+email: aelipek@bil.omu.edu.tr
+facebook: ~
+feed: ~
+flickr: ~
+google: ~
+googleanalyticsid:~
+googleplus: ~
+gpg: ~
+homeurl: http://aelipek.github.com
+logo: /assets/19/19-normal-128x128.png
+organization: ~
+picasa: ~
+related: Diğer Girdiler
+repository: aelipek.github.com
+ribbon: GitHub'dayım
+title: Abdullah Elipek
+twitter: ~
+
+navigator:
+        0: Teknik Olmayan Yazılar
+        1: Teknik Yazılar
+        9: Kısa Notlar
