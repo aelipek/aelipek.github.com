@@ -1,5 +1,7 @@
-
-
+---
+layout : post
+title : 'Vergi'
+---
 Vergi Kimlik No Doğrulama
 PHP Ile Vergi Kimlik No Doğrulama Genelde çoğu sistemde unique değişkenler özel anlamlara sahiptir.
 
